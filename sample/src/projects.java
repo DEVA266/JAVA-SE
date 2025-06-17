@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class projects { 
     public static void main(String[] args){
-        Rectangle(args);
+        mid_labs(args);
     }
 
     public static void Rectangle(String[] args) {
@@ -25,6 +25,26 @@ public class projects {
     }
 
     public static void mid_labs(String[] args) {
-        
+        Scanner input = new Scanner(System.in);
+        String adjective1,adjective2,noun,verb,adjective3;
+
+        System.out.print("Enter an Adjective (description) : ");
+        adjective1 = input.nextLine();
+
+        System.out.print("Enter a Noun (animal or person) : ");
+        noun = input.nextLine();
+
+        System.out.print("Enter an Adjective (description) : ");
+        adjective2 = input.nextLine();
+
+        System.out.print("Enter a verb (action word) : ");
+        verb = input.nextLine();
+
+        System.out.print("Enter an Adjective (description) : ");
+        adjective3 = input.nextLine();
+
+        System.out.println("Today i went to a " + adjective1 + " zoo\n" + "In exhibit, i saw a " + noun + ".\n" + noun + " was " + adjective2 + " and " + verb + " !\n" + "I was " + adjective3 + "!");
+
+        input.close();
     }
 }
