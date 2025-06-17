@@ -46,5 +46,6 @@ public class projects {
         System.out.println("Today i went to a " + adjective1 + " zoo\n" + "In exhibit, i saw a " + noun + ".\n" + noun + " was " + adjective2 + " and " + verb + " !\n" + "I was " + adjective3 + "!");
 
         input.close();
+
     }
 }
