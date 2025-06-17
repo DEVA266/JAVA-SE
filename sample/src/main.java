@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class main {
-    public static void main(String[] args){
+    public static void main (String[] args){
         /* int age = 18;
         String name = "Deva";
         String email = "24cs043@kpriet.ac.in";

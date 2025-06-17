@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
-public class rectangle {
+public class projects { 
     public static void main(String[] args){
+        Rectangle(args);
+    }
 
+    public static void Rectangle(String[] args) {
+        
         double length,breadth,area = 0;
 
         Scanner input = new Scanner(System.in);
@@ -18,5 +22,9 @@ public class rectangle {
         System.out.println("The area of the Rectangle : " + area);
         input.close();
 
+    }
+
+    public static void mid_labs(String[] args) {
+        
     }
 }
