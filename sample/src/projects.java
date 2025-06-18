@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class projects { 
     public static void main(String[] args){
-        mid_labs(args);
+        Random_numbers(args);
     }
 
     public static void Rectangle(String[] args) {
@@ -46,6 +47,39 @@ public class projects {
         System.out.println("Today i went to a " + adjective1 + " zoo\n" + "In exhibit, i saw a " + noun + ".\n" + noun + " was " + adjective2 + " and " + verb + " !\n" + "I was " + adjective3 + "!");
 
         input.close();
+
+    }
+
+    public static void shopping_cart(String[] args) {
+        Scanner i = new Scanner(System.in);
+        
+        System.out.print("what item would you to like to buy ? ");
+        String item_name = i.nextLine();
+
+        System.out.print("What is the price of each ? ");
+        float price = i.nextFloat();
+        i.nextLine();
+
+        System.out.print("How many would to like to buy ? ");
+        int quantity = i.nextInt();
+        i.nextLine();
+
+        System.out.println("\nYou have bought " + quantity + " " + item_name );
+        System.out.println("The total price was : $" + price*quantity);
+
+        i.close();
+    }
+
+    public static void Random_numbers(String[] args) {
+        Random random = new Random();
+        int num1,num2,num3;
+        num1 = random.nextInt(1,101);
+        num2 = random.nextInt(1,101);
+        num3 = random.nextInt(1,101);
+
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
 
     }
 }
