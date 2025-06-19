@@ -81,5 +81,65 @@ public class projects {
         System.out.println(num2);
         System.out.println(num3);
 
+        // the nextdouble method is used to generate a number between 0 to 1 , inbetween floating points
+        double number1 = random.nextDouble();
+        System.out.println(number1);
+
+        boolean isName = random.nextBoolean();
+        System.out.println(isName);
+
+    }
+
+    public static void Sphere(String[] args) {
+        Scanner i = new Scanner(System.in);
+
+        System.out.println("What would you like to calculate : ");
+        System.out.println("1.Area");
+        System.out.println("2.Volume");
+        System.out.println("3.Circumference");
+        System.out.println("4.All");
+        System.out.println("Enter The option number : ");
+        int option = i.nextInt();
+        i.nextLine();
+
+        System.out.println("Enter the Radius of the Sphere : ");
+        double radius = i.nextDouble();
+
+        // radius checking 
+        if (radius==0){
+            System.out.println("Please enter a valid radius ");
+        }
+        else {
+            // calculating 
+            double area,circumference,volume;
+            area = (Math.PI * Math.pow(radius,2));
+            volume = (4.0/3.0) * Math.PI * Math.pow(radius,3);
+            circumference = 2*Math.PI*radius;
+
+            if (option == 1){
+                System.out.println("The Area of the Sphere: " + area);
+            }
+
+            else if (option == 2 ){
+                System.out.println("The Volume of the sphere: " + volume);
+            }
+
+            else if (option == 3 ) {
+                System.out.println("The Cirucumference of the Sphere: " + circumference);
+            }
+
+            else if (option == 4 ){
+                System.out.println("The Area of the Sphere: " + area);
+                System.out.println("The Volume of the sphere: " + volume);
+                System.out.println("The Cirucumference of the Sphere: " + circumference);
+            }
+
+            else {
+                System.out.println("You entered a wrong option : ");
+            }
+
+        }
+
+        i.close();
     }
 }
