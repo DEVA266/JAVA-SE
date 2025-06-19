@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class projects { 
     public static void main(String[] args){
-        Random_numbers(args);
+        format(args);
     }
 
     public static void Rectangle(String[] args) {
@@ -141,5 +141,35 @@ public class projects {
         }
 
         i.close();
+    }
+
+    public static void format(String[] args) {
+        
+        // the format operator is used to print the values in between strings
+        String name = "Deva";
+        int age = 18;
+        double mark = 7.958850;
+        boolean isstudent = true;
+        char section = 'A';
+
+        System.out.printf("%s is %d years old \nHe scored an cgpa of %.2f in the Semester \nIs Deva a KPRIET Student ? %b \nHe is Student of CSE section %c \n\n\n\n",name,age,mark,isstudent,section);
+
+        // format operator for numbers and signs
+        double num1 = 101.3456;
+        double num2 = 7896473558.344;
+        double num3 = -49.568;
+
+        // + add for postive and - for negative
+        // , group the numbers 
+        // ( = the negatives are enclosed in the brackets
+        // space =  gives space for postive and minus for negatives
+
+        System.out.printf("%+.2f \n%+.2f \n%+.2f \n\n\n",num1,num2,num3);
+
+        System.out.printf("%,.2f \n%,.2f \n%,.2f \n\n\n",num1,num2,num3);
+
+        System.out.printf("%(.2f \n%(.2f \n%(.2f \n\n\n",num1,num2,num3);
+
+        System.out.printf("% .2f \n% .2f \n% .2f \n\n\n",num1,num2,num3);
     }
 }
