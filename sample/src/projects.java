@@ -210,5 +210,7 @@ public class projects {
 
         System.out.println("Your username : " + username);
         System.out.println("Your domain : " + domain);
+        
+        input.close();
     }
 }
