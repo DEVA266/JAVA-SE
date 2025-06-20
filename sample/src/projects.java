@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class projects { 
     public static void main(String[] args){
-        format(args);
+        username_password(args);
     }
 
     public static void Rectangle(String[] args) {
@@ -171,5 +171,44 @@ public class projects {
         System.out.printf("%(.2f \n%(.2f \n%(.2f \n\n\n",num1,num2,num3);
 
         System.out.printf("% .2f \n% .2f \n% .2f \n\n\n",num1,num2,num3);
+    }
+
+    public static void compound_intrest(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        double principle_amount,total_amount,intrest,times_compound,years;
+
+        System.out.print("Enter the principle amount : ");
+        principle_amount = input.nextDouble();
+        input.nextLine();
+
+        System.out.print("Enter the amount of Interest per year (in %): ");
+        intrest = input.nextDouble()/100;
+        input.nextLine();
+
+        System.out.print("Enter the time the amount compounded per year : ");
+        times_compound = input.nextDouble();
+        input.nextLine();
+
+        System.out.print("Enter the total no of years : ");
+        years = input.nextDouble();
+        input.nextLine();
+
+        total_amount = principle_amount * Math.pow((1+intrest/times_compound),(times_compound*years));
+
+        System.out.printf("The Total amount after %.1f years = %,.2f$",years,total_amount);
+        input.close();
+    }
+
+    public static void username_password(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Your Email Id : ");
+        String email = input.nextLine();
+
+        String username = email.substring(0,email.indexOf("@"));
+        String domain = email.substring(email.indexOf("@")+1);
+
+        System.out.println("Your username : " + username);
+        System.out.println("Your domain : " + domain);
     }
 }
