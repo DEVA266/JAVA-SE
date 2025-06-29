@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class demo {
     public static void main(String[] args) {
-        license_verification(args);
+        average(args);
     }
 
     public static void weight_converter(String[] args) {
@@ -221,5 +221,27 @@ public class demo {
         }
     }
 
-    
+    public static void average(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the total no of num to find average : ");
+        int size = scanner.nextInt();
+
+        int[] numbers = new int[size];
+
+        for(int i=0;i<size;i++){
+            System.out.print("Enter the number : ");
+            numbers[i] = scanner.nextInt();
+        }
+        System.out.print("The Average of the numbers are : " + averageFinder(numbers));
+
+        scanner.close();
+
+    }
+    static int averageFinder(int... numbers){
+        int sum = 0;
+        for(int num : numbers){
+            sum += num;
+        }
+        return sum;
+    }
 }
