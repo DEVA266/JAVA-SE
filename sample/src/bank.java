@@ -30,6 +30,7 @@ public class bank {
 
                 case 2 : {
                     balance = depositAmount(balance);
+                    
                     break;
                 }
 
