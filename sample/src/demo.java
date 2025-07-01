@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class demo {
     public static void main(String[] args) {
-        demojet();
+        weight_converter(args);
     }
 
     public static void weight_converter(String[] args) {
@@ -243,8 +243,5 @@ public class demo {
             sum += num;
         }
         return sum;
-    }
-    public static void demojet(){
-        System.out.println("Modified in Vs code");
     }
 }
