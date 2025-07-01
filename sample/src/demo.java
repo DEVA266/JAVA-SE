@@ -245,6 +245,6 @@ public class demo {
         return sum;
     }
     public static void demojet(){
-        System.out.println("This is on Jet Brains ");
+        System.out.println("Modified in Vs code");
     }
 }
