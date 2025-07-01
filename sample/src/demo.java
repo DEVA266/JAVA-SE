@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class demo {
     public static void main(String[] args) {
-        average(args);
+        demojet();
     }
 
     public static void weight_converter(String[] args) {
@@ -243,5 +243,8 @@ public class demo {
             sum += num;
         }
         return sum;
+    }
+    public static void demojet(){
+        System.out.println("This is on Jet Brains ");
     }
 }
