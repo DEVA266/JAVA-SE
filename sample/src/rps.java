@@ -107,8 +107,8 @@ public class rps {
         
         }
         System.out.println("\nGame Over");
-        
 
+        tie = tie + 1 - 1; // Increment tie count for the last round
         if(win > loss){
             System.out.println("\nYou are the Winner of the Game!");
         }
@@ -118,6 +118,7 @@ public class rps {
         else{
             System.out.println("\nMatch Tie!");
         }
+
         System.out.println("Thank you for playing!");
         System.out.println("Exiting the game...");
 
