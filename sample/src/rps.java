@@ -5,124 +5,54 @@ public class rps {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-
-        double computerGuess = random.nextDouble(0,1);
-        String computerChoice ;
         boolean isRunning = true;
-        String userChoice ;
-        int win=0,loss=0,tie=0;
-        String nextround;
+        int win = 0, loss = 0, tie = 0;
 
-        // System.out.println(computerGuess);
-        // Determine computer's choice based on the random number
-        if(computerGuess <= 1/3){
-            computerChoice = "rock";
-        }
-        else if (computerGuess <= 2/3){
-            computerChoice = "scissors";
-        }
-        else {
-            computerChoice = "paper";
-        }
-        
-        System.out.println("Rock Paper Scissor Game");
-        System.out.println();
-    
+        String[] choices = { "rock", "paper", "scissors" };
+
+        System.out.println("Rock Paper Scissor Game\n");
+
         while (isRunning) {
-            System.out.print("Enter Your Choice (rock,paper,scissors) : ");
-            userChoice = scanner.nextLine().toLowerCase();
-            
-            if(userChoice.equals("rock")){
-                if(computerChoice.equals("scissors")){
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("You Won The Game !");
-                    win++;
-                }
-                else if(computerChoice.equals("rock")){
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("Match Tie");
-                    tie++;
-                }
-                else{
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("You Loss The Game !");
-                    loss++;
-                }
-            }
+            // Generate computer's choice each round
+            String computerChoice = choices[random.nextInt(1, 4)];
 
-            if(userChoice.equals("scissors")){
-                if(computerChoice.equals("paper")){
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("You Won The Game !");
-                    win++;
-                }
-                else if(computerChoice.equals("scissors")){
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("Match Tie !");
-                    tie++;
-                }
-                else{
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("You Loss The Game !");
-                    loss++;
-                }
-            }
+            System.out.print("Enter Your Choice (rock, paper, scissors): ");
+            String userChoice = scanner.nextLine().trim().toLowerCase();
 
-            if(userChoice.equals("paper")){
-                if(computerChoice.equals("rock")){
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("You Won The Game !");
-                    win++;
-                }
-                else if(computerChoice.equals("paper")){
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("Match Tie !");
-                    tie++;
-                }
-                else{
-                    System.out.println("\nYour Guess : " + userChoice);
-                    System.out.println("Computer Guess : " + computerChoice);
-                    System.out.println("You Loss The Game!");
-                    loss++;
-                }
-            }
-            else{
-                System.out.println("\nInvalid Input! Please enter rock, paper, or scissors.");
+            if (!userChoice.equals("rock") && !userChoice.equals("paper") && !userChoice.equals("scissors")) {
+                System.out.println("Your input is invalid. Please enter rock, paper, or scissors.");
                 continue;
             }
 
-            System.out.print("Do you Want to Continue (Yes/No) : ");
-            nextround = scanner.nextLine().toLowerCase();
-            if(nextround.equals("no")){
+            System.out.println("\nYour Guess : " + userChoice);
+            System.out.println("Computer Guess : " + computerChoice);
+
+            if (userChoice.equals(computerChoice)) {
+                System.out.println("Match Tie!");
+                tie++;
+            }
+            else if ((userChoice.equals("rock") && computerChoice.equals("scissors")) ||
+                    (userChoice.equals("scissors") && computerChoice.equals("paper")) ||
+                    (userChoice.equals("paper") && computerChoice.equals("rock"))) {
+                System.out.println("You Won The Game!");
+                win++;
+            } 
+            else {
+                System.out.println("You Lost The Game!");
+                loss++;
+            }
+
+            System.out.print("Do you Want to Continue (Yes/No): ");
+            String nextround = scanner.nextLine().trim().toLowerCase();
+            if (nextround.equals("no")) {
                 isRunning = false;
-            }   
-        
+            }
         }
+
         System.out.println("\nGame Over");
-
-        tie = tie + 1 - 1; // Increment tie count for the last round
-        if(win > loss){
-            System.out.println("\nYou are the Winner of the Game!");
-        }
-        else if(loss > win){
-            System.out.println("\nYou are the Loser of the Game!");
-        }
-        else{
-            System.out.println("\nMatch Tie!");
-        }
-
+        System.out.printf("Won : %d\nLoss : %d\nTie : %d\n", win, loss, tie);
         System.out.println("Thank you for playing!");
         System.out.println("Exiting the game...");
-
-
         scanner.close();
     }
 }
