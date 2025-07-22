@@ -2,8 +2,12 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class demo {
+    static{
+        System.out.println("hello world");
+    }
     public static void main(String[] args) {
         weight_converter(args);
+        System.exit(0);
     }
 
     public static void weight_converter(String[] args) {
@@ -243,5 +247,8 @@ public class demo {
             sum += num;
         }
         return sum;
+    }
+    static int arun(){
+        return 0;
     }
 }
