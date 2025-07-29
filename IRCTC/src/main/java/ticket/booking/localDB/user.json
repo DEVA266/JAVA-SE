@@ -1,0 +1,24 @@
+[
+  {
+    "userId" : "26062007",
+    "password" : "devats",
+    "hashPassword" : "devats@266",
+    "userName" : "deva",
+    "ticketsBooked" : [
+      {
+        "ticketId" : "268597",
+        "userId" : "26062007",
+        "source" : "coimbatore",
+        "destination" : "chennai",
+        "travelDate" : "28-07-2025",
+        "train" : [
+          {
+            "trainId" : "bc#d3",
+            "trainNo" : "353878",
+            "seats" : [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+          }
+        ]
+      }
+    ]
+  }
+]
