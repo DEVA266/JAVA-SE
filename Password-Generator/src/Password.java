@@ -33,10 +33,10 @@ public class Password {
     }
 
     private void ScoreCalculator(int score){
-        if(score==5){
+        if(score>=4){
             System.out.println("You Have a Very Secure Password ! ");
         }
-        else if(score>=3){
+        else if(score==3){
             System.out.println("You have a Strong Password, But it needs some improvement");
         }
         else if(score==2){
