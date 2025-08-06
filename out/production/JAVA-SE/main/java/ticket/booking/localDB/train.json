@@ -1,0 +1,16 @@
+[
+  {
+    "trainID" : "ba#57a",
+    "trainNo" : "85862",
+    "seats" : [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+    "stationTime" : {
+      "coimbatore" :  "18:05:00",
+      "salem" : "24:10:00",
+      "virudhunagar" : "3:00:00",
+      "chennai" : "6:00:00"
+    },
+    "stationName" : [
+      "coimbatiore" , "salem", "virudhunagar", "chennai"
+    ]
+  }
+]
