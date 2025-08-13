@@ -31,12 +31,12 @@ public class pattern {
                 System.out.print(" ");
             }
             //numbers
-            for(int j=i; j>=1; j--){
+            for(int j=1; j<=i; j++){
                 if(j%2!=0) System.out.print("1" + " ");
                 else System.out.print("." + " ");
             }
             //right angle
-            for(int j=1; j<=i; j++){
+            for(int j=i; j>=1; j--){
                 if(j%2!=0) System.out.print("1" + " ");
                 else System.out.print("." + " ");
             }
