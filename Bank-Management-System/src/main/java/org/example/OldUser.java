@@ -8,7 +8,6 @@ public class OldUser {
     void setAdminName(String name){
         this.adminName = name;
     }
-
     void setMobileNumber(long number){
         this.mobileNumber = number;
     }
@@ -25,7 +24,7 @@ public class OldUser {
         return this.mobileNumber;
     }
 
-    double getAccountBalance(){
+    double getAccountBalance() {
         return this.accountBalance;
     }
 }
